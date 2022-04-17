@@ -3,6 +3,11 @@ import os
 
 
 def getData(filepath):
+    '''Get data from given file in filepath. Put it line to line in a list.
+
+    Param str filepath Any filepath wich conduces to a plain text file
+    Returns list words List of lines included in the plain text file
+    '''
     words = []
     with open (filepath, "r", encoding="utf-8") as f:
         for line in f:

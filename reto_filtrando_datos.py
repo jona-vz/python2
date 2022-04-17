@@ -72,11 +72,18 @@ DATA = [
 ]
 
 def run():
+    #working with comprehensions and high order functions
+    #Objective:
+    #1-show all the python devs using filter and lambda
     all_python_devs = list(filter(lambda worker: worker['language'] == 'python', DATA))
     all_python_devs = list(map(lambda worker: worker['name'], all_python_devs))
+    #2-show all the Platzi workers using filter and lambda
     all_platzi_workers = list(filter(lambda worker: worker['organization'] == 'Platzi', DATA))
     all_platzi_workers = list(map(lambda worker: worker['name'], all_platzi_workers))
+    #3-show all adults of data using comprehensions
     adults = [worker['name'] for worker in DATA if worker['age'] > 18]
+    #4-Using comprehensions add the old atribute to your data with true if person
+    #  are older than that and false in other case
     old_people = [worker | {'old': worker['age'] > 70} for worker in DATA]
 
     # print('All python devs')

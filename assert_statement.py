@@ -1,4 +1,25 @@
+def divisors(num):
+    '''Returns a list with all the divisors of the entered number
+
+    Param int num Any positive integer number
+    Returns list divisors List of numbers i that num are divisible by them (i)
+    '''
+    divisors = [i for i in range(1, num+1) if num % i == 0]    
+    return divisors
+
+def run():
+    num = input("Ingrese un número:   ")
+    assert num.isnumeric(), "Debes ingresar un numero positivo"
+    print(divisors(int(num)))
+    print("Terminó el programa")
+
+
+
+if __name__ == '__main__':
+    run()
+
 '''
+#following the course solution:
 def divisors(num):
     #divisors = [i for i in range(1, num+1) if num % i == 0]
     try:
@@ -34,18 +55,3 @@ if __name__ == '__main__':
     run()
 '''
 
-
-def divisors(num):
-    divisors = [i for i in range(1, num+1) if num % i == 0]    
-    return divisors
-
-def run():
-    num = input("Ingrese un número:   ")
-    assert num.isnumeric(), "Debes ingresar un numero positivo"
-    print(divisors(int(num)))
-    print("Terminó el programa")
-
-
-
-if __name__ == '__main__':
-    run()
